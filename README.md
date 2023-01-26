@@ -1,27 +1,62 @@
-## The Golden Rule:
+![wireframe]('/assets/wireframe.png')
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+# HOME PAGE HTML
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+-   header with SIGN IN/SIGN OUT and CREATE buttons
+-   empty section for created posts
 
-## Making a plan
+# HOME PAGE EVENTS
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Look at the drawing and name the HTML elements you'll need to realize your vision**
-1. **Look at the drawing and imagine using the app. What _state_ do you need to track?**
-1. **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
-1. **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+-   ON LOAD:
 
-Additional considerations:
+    -   fetch posts
+    -   loop through posts
+    -   render post element
+    -   append element to DOM
+    -   display SIGN IN button
 
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+-   ON SIGN IN 'click'
+
+    -   redirect to AUTH page
+    -   display SIGN OUT button
+
+-   ON SIGN OUT 'click'
+
+    -   logOut() user, refresh HOME PAGE
+
+-   ON CREATE 'click'
+    -   redirect to create page
+
+# AUTH PAGE HTML
+
+-   sign in form
+-   sign out form
+
+# AUTH PAGE EVENTS
+
+-   ON LOAD:
+
+    -   if logged in redirect to HOME PAGE
+
+-   ON SUBMIT SIGN IN FROM:
+
+    -   use signIn() with email and password
+    -   redirect to HOME PAGE
+
+-   ON SIGN UP FORM:
+    -   use signUp() with email and password
+    -   redirect to HOME PAGE
+
+# CREATE PAGE HTML
+
+-   create post form
+
+# CREATE PAGE EVENTS
+
+-   ON LOAD:
+
+    -   if NOT logged in redirect to HOME PAGE
+
+-   ON SUBMIT CREATE FROM:
+    -   create post from data
+    -   redirect to HOME PAGE
