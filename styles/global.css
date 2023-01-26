@@ -20,6 +20,7 @@ header {
 
     display: flex;
     align-items: center;
+    justify-content: right;
     gap: 10px;
 
     background-color: var(--header-background);

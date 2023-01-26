@@ -60,3 +60,13 @@
 -   ON SUBMIT CREATE FROM:
     -   create post from data
     -   redirect to HOME PAGE
+
+SLICES:
+
+-   create pages and files
+-   build HTML skeleton
+-   link supabase
+-   fetch, loop, render, append
+-   create SIGN IN/SIGN UP functions
+-   verify log in
+-   create post
