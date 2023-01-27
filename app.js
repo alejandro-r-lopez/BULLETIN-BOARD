@@ -14,6 +14,8 @@ import { getPosts } from './fetch-utils.js';
 import { renderPost } from './render.utils.js';
 
 const postsSection = document.querySelector('.posts-section');
+const signInButton = document.querySelector('.sign-in-button');
+const createButton = document.querySelector('.create-button');
 
 let postsData = [];
 
@@ -31,3 +33,11 @@ function displayPosts() {
         postsSection.append(createdPost);
     }
 }
+
+signInButton.addEventListener('click', () => {
+    window.location = '/auth';
+});
+
+createButton.addEventListener('click', () => {
+    window.location = '/create';
+});

@@ -22,20 +22,21 @@ export async function signUp(email, password) {
 }
 
 export async function signIn(email, password) {
-    const { data } = await client.auth.signInWithPassword({
+    const { data } = await client.auth.signIn({
         email,
         password,
     });
     return data;
 }
-
 export async function checkAuth() {
     const user = await getUser();
     if (!user) location.replace('/auth');
 }
-
+export async function redirectIfLoggedIn() {
+    if (await getUser()) {
+        window.location = '/';
+    }
+}
 export async function signOut() {
-    const response = await client.auth.signOut();
-
-    return response.error;
+    await client.auth.signOut();
 }
