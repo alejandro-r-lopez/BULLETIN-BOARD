@@ -10,7 +10,7 @@
 
 // (don't forget to call any display functions you want to run on page load!)
 
-import { getPosts, getUser, signOut } from './fetch-utils.js';
+import { getPosts, getUser, redirectIfLoggedIn, signOut } from './fetch-utils.js';
 import { renderPost } from './render.utils.js';
 
 const postsSection = document.querySelector('.posts-section');
@@ -28,7 +28,7 @@ window.addEventListener('load', async () => {
     displayPosts();
 
     if (user) {
-        signInButton.textContent = 'LOG OUT';
+        signInButton.textContent = 'SIGN OUT';
     }
 });
 

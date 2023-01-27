@@ -1,5 +1,4 @@
 :root {
-    --background: rgb(0, 0, 0);
     --header-background: rgb(254, 251, 245);
     --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
         'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
@@ -10,22 +9,24 @@ body {
     background: var(--background);
     display: grid;
     grid-template-rows: auto 1fr;
+    background-image: url('/assets/vaporwave.jpg');
+    background-size: cover;
 }
 
 header {
-    position: sticky;
-    top: 0;
+    position: absolute;
+    bottom: 0;
     padding: 15px;
-    height: 80px;
+    height: 36px;
+    width: 100%;
 
     display: flex;
     align-items: center;
-    justify-content: right;
+
     gap: 10px;
 
-    background-color: black;
-    border: 1px solid rgb(0, 255, 0);
-    border
+    background-color: rgb(199, 199, 199);
+    border-top: 3px solid rgb(166, 166, 166);
 }
 
 header .logo {
@@ -44,11 +45,8 @@ main {
 }
 
 button {
-    background-color: black;
-    color: rgb(0, 255, 0);
-    font-size: 12px;
-    padding: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border: solid rgb(0, 255, 0);
+    background: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
+    padding: 4px;
 }

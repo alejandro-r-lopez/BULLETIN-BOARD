@@ -1,4 +1,5 @@
 export function renderPost(post) {
+    const postLink = document.createElement('a');
     const postBox = document.createElement('div');
     const postTitle = document.createElement('p');
     const postMessage = document.createElement('p');
@@ -9,8 +10,10 @@ export function renderPost(post) {
     postTitle.textContent = `${post.title}:`;
     postMessage.textContent = post.message;
     postAuthor.textContent = `---${post.author}`;
-
+    postLink.href = '/';
     postBox.append(postTitle, postMessage, postAuthor);
 
-    return postBox;
+    postLink.append(postBox);
+
+    return postLink;
 }
