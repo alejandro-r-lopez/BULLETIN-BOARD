@@ -40,3 +40,15 @@ export async function redirectIfLoggedIn() {
 export async function signOut() {
     await client.auth.signOut();
 }
+
+export async function createPost(title, message, author) {
+    const { data, error } = await client.from('posts').insert([
+        {
+            title: title,
+            message: message,
+            author: author,
+        },
+    ]);
+
+    return data;
+}
