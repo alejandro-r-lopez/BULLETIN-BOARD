@@ -8,3 +8,34 @@ export async function getPosts() {
     const { data } = await client.from('posts').select('*');
     return data;
 }
+
+export async function getUser() {
+    return client.auth.session() && client.auth.session().user;
+}
+
+export async function signUp(email, password) {
+    const { data } = await client.auth.signUp({
+        email,
+        password,
+    });
+    return data;
+}
+
+export async function signIn(email, password) {
+    const { data } = await client.auth.signInWithPassword({
+        email,
+        password,
+    });
+    return data;
+}
+
+export async function checkAuth() {
+    const user = await getUser();
+    if (!user) location.replace('/auth');
+}
+
+export async function signOut() {
+    const response = await client.auth.signOut();
+
+    return response.error;
+}
