@@ -10,7 +10,7 @@
 
 // (don't forget to call any display functions you want to run on page load!)
 
-import { getPosts } from './fetch-utils.js';
+import { getPosts, getUser, signOut } from './fetch-utils.js';
 import { renderPost } from './render.utils.js';
 
 const postsSection = document.querySelector('.posts-section');
@@ -20,11 +20,16 @@ const createButton = document.querySelector('.create-button');
 let postsData = [];
 
 window.addEventListener('load', async () => {
+    const user = await getUser();
     const gotPosts = await getPosts();
 
     postsData = gotPosts;
 
     displayPosts();
+
+    if (user) {
+        signInButton.textContent = 'LOG OUT';
+    }
 });
 
 function displayPosts() {
@@ -35,6 +40,7 @@ function displayPosts() {
 }
 
 signInButton.addEventListener('click', () => {
+    if (getUser()) signOut();
     window.location = '/auth';
 });
 

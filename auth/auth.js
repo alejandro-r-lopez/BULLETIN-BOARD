@@ -1,7 +1,12 @@
 import { signIn, signUp, redirectIfLoggedIn } from '../fetch-utils.js';
 
+const homeButton = document.querySelector('.home-button');
 const signUpForm = document.querySelector('.sign-up-form');
 const signInForm = document.querySelector('.sign-in-form');
+
+homeButton.addEventListener('click', () => {
+    window.location = '/';
+});
 
 signUpForm.addEventListener('submit', async (e) => {
     e.preventDefault();
