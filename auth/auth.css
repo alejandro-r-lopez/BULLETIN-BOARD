@@ -1,0 +1,118 @@
+body {
+    font-family: var(--primary-font);
+    background: var(--background);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-image: url('/assets/vaporwave.jpg');
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+header {
+    position: absolute;
+    bottom: 0;
+    padding: 17px;
+    height: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(199, 199, 199);
+    border-top: 3px solid rgb(222, 222, 222);
+}
+
+main {
+    padding: 20px;
+    color: black;
+    display: grid;
+    justify-content: center;
+}
+
+.postbox-style {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    color: aliceblue;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.icon {
+    width: 40px;
+}
+
+.sign-in-form {
+    background-color: rgb(199, 199, 199);
+    width: 300px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: 'DotGothic16', sans-serif;
+    margin-top: 50%;
+    border-top: 8px solid rgb(222, 222, 222);
+    border-right: 8px solid rgb(170, 170, 170);
+    border-left: 8px solid rgb(190, 190, 190);
+    border-bottom: 8px solid rgb(150, 150, 150);
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.sign-up-form {
+    background-color: rgb(199, 199, 199);
+    width: 300px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: 'DotGothic16', sans-serif;
+    margin-top: 40px;
+    border-top: 8px solid rgb(222, 222, 222);
+    border-right: 8px solid rgb(170, 170, 170);
+    border-left: 8px solid rgb(190, 190, 190);
+    border-bottom: 8px solid rgb(150, 150, 150);
+    font-size: 14px;
+    line-height: 30px;
+}
+
+input {
+    border-top: 2px solid rgb(130, 130, 130);
+    border-right: 2px solid rgb(190, 190, 190);
+    border-left: 2px solid rgb(190, 190, 190);
+    border-bottom: 2px solid rgb(150, 150, 150);
+    background-color: none;
+    font-size: 12px;
+    padding: 2px;
+}
+
+.sign-button {
+    width: 80px;
+    display: flex;
+    align-self: flex-end;
+    margin-top: 20px;
+    background: none;
+    text-align: center;
+    justify-content: center;
+    border-top: 2px solid rgb(222, 222, 222);
+    border-right: 2px solid rgb(170, 170, 170);
+    border-left: 2px solid rgb(190, 190, 190);
+    border-bottom: 2px solid rgb(150, 150, 150);
+}
+
+.home-button {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 4px;
+    background: none;
+    font-family: 'DotGothic16', sans-serif;
+    width: 80px;
+    margin-left: 10px;
+    border-top: 2px solid rgb(222, 222, 222);
+    border-right: 2px solid rgb(170, 170, 170);
+    border-left: 2px solid rgb(190, 190, 190);
+    border-bottom: 2px solid rgb(150, 150, 150);
+}

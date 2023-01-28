@@ -1,0 +1,86 @@
+body {
+    font-family: var(--primary-font);
+    background: var(--background);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-image: url('/assets/vaporwave.jpg');
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+header {
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(199, 199, 199);
+    border-top: 3px solid rgb(166, 166, 166);
+}
+
+main {
+    padding: 20px;
+    color: black;
+    display: grid;
+    justify-content: center;
+}
+
+.create-form {
+    background-color: rgb(199, 199, 199);
+    width: 300px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: 'DotGothic16', sans-serif;
+    margin-top: 40px;
+    border-top: 8px solid rgb(222, 222, 222);
+    border-right: 8px solid rgb(170, 170, 170);
+    border-left: 8px solid rgb(190, 190, 190);
+    border-bottom: 8px solid rgb(150, 150, 150);
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 50%;
+}
+
+.home-button {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 4px;
+    background: none;
+    font-family: 'DotGothic16', sans-serif;
+    width: 80px;
+    margin-left: 10px;
+    border-top: 2px solid rgb(222, 222, 222);
+    border-right: 2px solid rgb(170, 170, 170);
+    border-left: 2px solid rgb(190, 190, 190);
+    border-bottom: 2px solid rgb(150, 150, 150);
+}
+
+.message {
+    padding-bottom: 100px;
+}
+
+input {
+    width: 300px;
+    border-top: 2px solid rgb(130, 130, 130);
+    border-right: 2px solid rgb(190, 190, 190);
+    border-left: 2px solid rgb(190, 190, 190);
+    border-bottom: 2px solid rgb(150, 150, 150);
+}
+
+.submit-button {
+    background: none;
+    font-family: 'DotGothic16', sans-serif;
+    width: 80px;
+    margin-left: 10px;
+    border-top: 2px solid rgb(222, 222, 222);
+    border-right: 2px solid rgb(170, 170, 170);
+    border-left: 2px solid rgb(190, 190, 190);
+    border-bottom: 2px solid rgb(150, 150, 150);
+    margin-top: 20px;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+}

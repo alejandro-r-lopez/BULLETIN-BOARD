@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <!-- title and favicon -->
+        <title>Web App</title>
+        <link rel="icon" type="image/x-icon" href= />
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
+        ></script>
+        <!-- js -->
+        <script type="module" src="create.js"></script>
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+        rel="stylesheet"
+        <!-- see https://fonts.google.com/ -->
+
+        <!-- see https://fonts.google.com/ -->
+
+        <!-- css -->
+        <link rel="stylesheet" href="/create/create.css" />
+    </head>
+
+    <body>
+        <header></header>
+
+        <main>
+            <button class="home-button">home</button>
+            <section class="create-section">
+                <form class="create-form">
+                    <label
+                        >SUBJECT
+                        <input name="title" />
+                    </label>
+                    <label
+                        >MESSAGE
+                        <input class="message" name="message" />
+                    </label>
+                    <label
+                        >SIGNATURE
+                        <input name="author" />
+                    </label>
+                    <button class="submit-button">SUBMIT</button>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
